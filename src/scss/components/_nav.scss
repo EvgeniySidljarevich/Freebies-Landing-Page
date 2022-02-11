@@ -1,0 +1,73 @@
+.nav {
+  @include flexible(space-between, center);
+  padding: 35px 0;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: $lg-text;
+    line-height: 24px;
+    color: $dark-color;
+  }
+
+  &__logo-icon {
+    margin-right: 0.4em;
+  }
+
+  &__logo--bold {
+    font-weight: bold;
+  }
+
+  &__links {
+    font-weight: normal;
+    font-size: $sm-text;
+    line-height: 19px;
+    color: $light-color;
+    @include lg {
+      display: none;
+    }
+  }
+
+  &__link {
+    margin: 0 1.5rem;
+  }
+
+  &__registration {
+    @include flexible(space-between, center);
+    font-weight: 500;
+    font-size: $sm-text;
+    line-height: 19px;
+    color: $dark-color;
+    @include md {
+      display: none;
+    }
+  }
+
+  &__sign-in {
+    margin-right: 20px;
+  }
+
+  &__sign-up {
+    margin-right: 1px;
+  }
+
+  &__sign-up--active {
+    @include flexible(center, center);
+    width: 120px;
+    height: 35px;
+    color: $error-color;
+    border: 2px solid $error-color;
+    border-radius: 50px;
+  }
+
+  &__menu-btn {
+    display: none;
+    border: none;
+    outline: none;
+    background: white;
+    @include lg {
+      display: block;
+    }
+  }
+}

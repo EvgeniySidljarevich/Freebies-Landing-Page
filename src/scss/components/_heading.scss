@@ -1,0 +1,41 @@
+.heading {
+  max-width: 555px;
+  margin: 0 auto;
+  padding: 60px 0;
+  @include lg {
+    padding: 40px 0;
+  }
+  @include md {
+    padding: 30px 0;
+  }
+  @include sm {
+    padding: 20px 0;
+  }
+
+  &__title {
+    max-width: 440px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    font-weight: 500;
+    font-size: $xxl-text;
+    line-height: 50px;
+    text-align: center;
+    color: $dark-color;
+    @include md {
+      font-size: $xl-text;
+      padding: 0;
+    }
+  }
+
+  &__subtitle {
+    font-weight: normal;
+    font-size: $sm-text;
+    line-height: 30px;
+    text-align: center;
+    color: $light-color;
+  }
+
+  &__subtitle--medium {
+    font-weight: 500;
+  }
+}

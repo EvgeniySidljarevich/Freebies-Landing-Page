@@ -1,0 +1,97 @@
+.hero {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 65px 0 80px 0;
+  @include md {
+    flex-direction: column;
+    align-items: center;
+    padding: 35px 0 40px 0;
+  }
+
+  &__content {
+    @include flexible(space-between);
+    flex-direction: column;
+    min-width: 50%;
+    @include md {
+      align-items: center;
+      padding-bottom: 1rem;
+    }
+  }
+
+  &__title {
+    padding-bottom: 0.5em;
+    font-weight: 500;
+    font-size: 5rem;
+    line-height: 70px;
+    color: $dark-color;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    @include lg {
+      font-size: 4rem;
+      line-height: 60px;
+    }
+    @include md {
+      text-align: center;
+    }
+    @include sm {
+      font-size: 3rem;
+      line-height: 40px;
+    }
+  }
+
+  &__title--bold {
+    font-weight: bold;
+  }
+
+  &__subtitle {
+    padding-bottom: 5rem;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 30px;
+    color: $light-color;
+    @include sm {
+      text-align: center;
+    }
+  }
+
+  &__subtitle--medium {
+    font-weight: 500;
+  }
+
+  &__link {
+    @include flexible(center, center);
+    width: 220px;
+    height: 50px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 25px;
+    color: #ffffff;
+    background: $error-color;
+    border-radius: $rounded;
+  }
+
+  &__link--activ {
+    box-shadow: 0 25px 20px -10px rgba(245, 56, 56, 0.35);
+  }
+
+  &__icon {
+    position: relative;
+    right: 0;
+    max-width: 609px;
+    width: 100%;
+    transform: translate(12%, 0);
+    background: url(../assets/icons/header/man-with-computer.svg)
+      center/contain no-repeat;
+    @include xl {
+      position: static;
+      transform: none;
+      width: 70%;
+    }
+    @include md {
+      position: static;
+      width: 60%;
+      height: 40vw;
+      transform: none;
+    }
+  }
+}

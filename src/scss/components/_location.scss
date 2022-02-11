@@ -1,0 +1,69 @@
+.location {
+  padding: 40px 0;
+  @include xl {
+    padding: 0;
+  }
+
+  &__map {
+    margin: 0 auto;
+    height: 45vw;
+    background: url(../assets/icons/main/map.svg)
+      center/contain no-repeat;
+  }
+
+  &__icons {
+    @include flexible(space-around);
+    flex-wrap: nowrap;
+    margin-top: 40px;
+    @include lg {
+      flex-wrap: wrap;
+    }
+    @include md {
+      margin-top: 20px;
+    }
+  }
+
+  &__icon {
+    width: 190px;
+    height: 60px;
+    margin: 10px 0;
+    padding: 0 5px;
+    @include xl {
+      width: 150px;
+      height: 50px;
+    }
+    @include lg {
+      width: 120px;
+      height: 45px;
+    }
+    @include sm {
+      width: 90px;
+      height: 30px;
+    }
+  }
+
+  &__icon--netflix {
+    background: url(../assets/icons/main/netflix.svg)
+      center/contain no-repeat;
+  }
+
+  &__icon--reddit {
+    background: url(../assets/icons/main/reddit.svg)
+      center/contain no-repeat;
+  }
+
+  &__icon--amazon {
+    background: url(../assets/icons/main/amazon.svg)
+      center/contain no-repeat;
+  }
+
+  &__icon--discord {
+    background: url(../assets/icons/main/discord.svg)
+      center/contain no-repeat;
+  }
+
+  &__icon--spotify {
+    background: url(../assets/icons/main/spotify.svg)
+      center/contain no-repeat;
+  }
+}

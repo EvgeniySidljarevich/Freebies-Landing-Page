@@ -1,0 +1,86 @@
+.features {
+  display: flex;
+  justify-content: space-between;
+  padding: 90px 0 100px 0;
+  @include lg {
+    padding: 70px 0 80px 0;
+  }
+  @include md {
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0 50px 0;
+  }
+  @include sm {
+    padding: 40px 0 40px 0;
+  }
+
+  &__icon {
+    max-width: 500px;
+    width: 100%;
+    background: url(../assets/icons/header/computer.svg)
+      center/contain no-repeat;
+    @include lg {
+      width: 50vw;
+    }
+    @include md {
+      width: 55%;
+      height: 50vw;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    @include lg {
+      margin-left: 10px;
+      min-width: 50%;
+    }
+    @include md {
+      margin: 0;
+      width: 100%;
+    }
+  }
+
+  &__title {
+    padding-bottom: 0.9em;
+    font-weight: 500;
+    font-size: $xxl-text;
+    line-height: 50px;
+    color: $dark-color;
+    @include md {
+      text-align: center;
+    }
+    @include sm {
+      font-size: $xl-text;
+      line-height: 40px;
+    }
+  }
+
+  &__subtitle {
+    padding-bottom: 1.4em;
+    font-weight: normal;
+    font-size: $sm-text;
+    line-height: 30px;
+    color: $light-color;
+    @include md {
+      text-align: center;
+    }
+  }
+
+  &__list {
+    @include md {
+      margin: 0 auto;
+    }
+  }
+
+  &__item {
+    padding: 0 0 1em 3em;
+    font-weight: normal;
+    font-size: $xs-text;
+    line-height: 30px;
+    color: $light-color;
+    background: url(../assets/icons/header/tick-in-circle.svg)
+      0 10% no-repeat;
+  }
+}

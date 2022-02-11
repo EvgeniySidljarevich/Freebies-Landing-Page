@@ -1,0 +1,109 @@
+.footer {
+  padding: 200px 0 60px 0;
+
+  &__contacts {
+    max-width: 340px;
+    @include lg {
+      text-align: center;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: $lg-text;
+    line-height: 24px;
+    color: $dark-color;
+    @include lg {
+      justify-content: center;
+    }
+  }
+
+  &__icons {
+    @include lg {
+      justify-content: center;
+    }
+  }
+
+  &__logo-icon {
+    margin-right: 0.4em;
+  }
+
+  &__logo--bold {
+    font-weight: bold;
+  }
+
+  &__text {
+    margin: 15px 0;
+    font-weight: normal;
+    font-size: $sm-text;
+    line-height: 30px;
+    color: $light-color;
+    @include sm {
+      font-size: $xs-text;
+    }
+  }
+
+  &__text--medium {
+    margin-bottom: 0;
+    font-weight: 500;
+  }
+
+  &__icons {
+    display: flex;
+  }
+
+  &__icon {
+  }
+
+  &__signature {
+    font-weight: normal;
+    font-size: $sm-text;
+    line-height: 30px;
+    color: #afb5c0;
+  }
+
+  &__help {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    max-width: 500px;
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      margin: 0 20px;
+
+      &__title {
+        margin-bottom: 20px;
+        font-weight: 500;
+        font-size: $md-text;
+        line-height: 30px;
+        color: $dark-color;
+      }
+
+      &__item {
+        font-weight: normal;
+        font-size: $sm-text;
+        line-height: 30px;
+        color: $light-color;
+        @include sm {
+          font-size: $xs-text;
+        }
+      }
+    }
+  }
+}
+
+.container--flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+  @include lg {
+    gap: 0;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 30px;
+  }
+}

@@ -1,0 +1,120 @@
+.products {
+  @include flexible(space-around);
+  padding-bottom: 60px;
+  @include lg {
+    padding-bottom: 30px;
+  }
+  @include md {
+    padding-bottom: 15px;
+  }
+}
+
+.product-card {
+  @include flexible(space-between, center);
+  flex-direction: column;
+  margin: 10px;
+  padding: 60px 5px 40px 5px;
+  width: 330px;
+  height: 760px;
+  border: 2px solid #dddddd;
+  border-radius: $rounded;
+  @include xl {
+    width: 280px;
+    height: 710px;
+  }
+  @include lg {
+    padding: 40px 5px 20px 5px;
+    width: 230px;
+    height: 620px;
+  }
+
+  &__logo {
+    margin-bottom: 40px;
+    width: 154px;
+    height: 175px;
+    @include lg {
+      margin-bottom: 30px;
+      width: 124px;
+      height: 145px;
+    }
+  }
+
+  &__logo--free {
+    background: url(../assets/icons/main/free-box.svg)
+      center/contain no-repeat;
+  }
+
+  &__logo--standart {
+    background: url(../assets/icons/main/standart-box.svg)
+      center/contain no-repeat;
+  }
+
+  &__logo--premium {
+    background: url(../assets/icons/main/premium-box.svg)
+      center/contain no-repeat;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: $md-text;
+    line-height: 30px;
+    text-align: center;
+    color: $dark-color;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    font-weight: normal;
+    font-size: $xs-text;
+    line-height: 30px;
+    color: $light-color;
+  }
+
+  &__item {
+    padding-left: 3rem;
+    background: url(../assets/icons/main/tick.svg)
+      0 45% no-repeat;
+  }
+
+  &__plan {
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: $xl-text;
+    line-height: 30px;
+    text-align: center;
+    color: $dark-color;
+    @include lg {
+      font-size: $lg-text;
+    }
+  }
+
+  &__plan--regular {
+    font-weight: normal;
+    color: $light-color;
+  }
+
+  &__link {
+    @include flexible(center, center);
+    width: 150px;
+    height: 45px;
+    font-weight: bold;
+    font-size: $sm-text;
+    line-height: 19px;
+    color: $error-color;
+    border: 2px solid $error-color;
+    border-radius: 50px;
+  }
+
+  &__link--activ {
+    color: #ffffff;
+    background: $error-color;
+    box-shadow: 0 25px 20px -10px rgba(245, 56, 56, 0.35);
+  }
+}
+
+.product-card--active {
+  border: 2px solid $error-color;
+}
